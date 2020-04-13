@@ -44,10 +44,9 @@ void* FreeListAllocator::Allocate(size_t size, int alignment)
 	}
 
 	AllocationHeader* AllocatedHeader = reinterpret_cast<AllocationHeader*>(reinterpret_cast<char*>(node) + AlignmentPadding);
-	void* Data = reinterpret_cast<void*>(reinterpret_cast<char*>(AllocatedHeader) + sizeof(AllocatedHeader));
+	void* Data = reinterpret_cast<void*>(reinterpret_cast<char*>(AllocatedHeader) + sizeof(AllocationHeader));
 
-	AllocatedHeader->m_BlockSize = TotalSize;
-	AllocatedHeader->m_Padding = AlignmentPadding;
+	new (AllocatedHeader) AllocationHeader{ static_cast<size_t>(TotalSize), static_cast<size_t>(AlignmentPadding) };
 
 	m_MemoryUsed += TotalSize;
 	m_FreeMemory -= TotalSize;
