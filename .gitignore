@@ -3,3 +3,6 @@
 ################################################################################
 
 /LunaEngine/Debug
+/LunaEngine/LunaEngine/Debug
+/LunaEngine/LunaEngine/x64/Debug
+/LunaEngine/.vs/LunaEngine/v16
