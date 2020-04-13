@@ -2,7 +2,6 @@
 //
 
 #include "framework.h"
-#include "LunaEngine.h"
 #include "WindowHelper.h"
 #include <fstream>
 

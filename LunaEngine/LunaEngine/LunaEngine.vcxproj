@@ -152,13 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Main\framework.h" />
-    <ClInclude Include="Main\LunaEngine.h" />
     <ClInclude Include="Main\Resource.h" />
     <ClInclude Include="Main\targetver.h" />
     <ClInclude Include="Main\WindowHelper.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\LunaEngine.cpp" />
+    <ClCompile Include="Main\main.cpp" />
     <ClCompile Include="Main\WindowHelper.cpp" />
   </ItemGroup>
   <ItemGroup>

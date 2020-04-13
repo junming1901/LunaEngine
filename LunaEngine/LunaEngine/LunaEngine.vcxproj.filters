@@ -16,12 +16,12 @@
     <Filter Include="Source Files\Main">
       <UniqueIdentifier>{63daa7c5-1a51-4d45-af86-560b3337d16a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{1e566878-159c-4086-9941-50295ba37641}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main\framework.h">
-      <Filter>Source Files\Main</Filter>
-    </ClInclude>
-    <ClInclude Include="Main\LunaEngine.h">
       <Filter>Source Files\Main</Filter>
     </ClInclude>
     <ClInclude Include="Main\Resource.h">
@@ -48,10 +48,10 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main\LunaEngine.cpp">
+    <ClCompile Include="Main\WindowHelper.cpp">
       <Filter>Source Files\Main</Filter>
     </ClCompile>
-    <ClCompile Include="Main\WindowHelper.cpp">
+    <ClCompile Include="Main\main.cpp">
       <Filter>Source Files\Main</Filter>
     </ClCompile>
   </ItemGroup>
