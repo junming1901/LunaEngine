@@ -4,13 +4,24 @@
 #include <iostream>
 #include <new>
 
-#define DEBUG_FREELIST true
+#define DEBUG_FREELIST false
 
 FreeListAllocator::FreeListAllocator(size_t pagesize)
 : m_PageSize { pagesize }, m_NumberPages { 0 }, m_Pages { nullptr },  m_FreeNodes { nullptr }, 
   m_FreeMemory { 0 }, m_MemoryUsed { 0 }, m_NumberAllocations { 0 }
 {
 	AllocateNewPage();
+}
+
+FreeListAllocator::~FreeListAllocator()
+{
+	while (m_Pages != nullptr)
+	{
+		PageHeader* temp = m_Pages;
+		m_Pages = m_Pages->m_Next;
+
+		free(temp);
+	}
 }
 
 void* FreeListAllocator::Allocate(size_t size, int alignment)

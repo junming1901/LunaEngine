@@ -5,6 +5,7 @@
 #include "WindowHelper.h"
 #include "LunaEngine.h"
 #include <fstream>
+#include <iostream>
 
 #define CREATE_CONSOLE true
 
@@ -40,11 +41,27 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     LunaEngine::CreateInstance();
 
-    window->RecieveMessage();
+    LunaEngine* engine = LunaEngine::GetInstance();
+
+    engine->Init();
+
+    std::cout << "Initialization Complete..." << std::endl;
+
+    do
+    {
+        window->RecieveMessage();
+
+    } while (engine->Update());
+
+    engine->Free();
 
     LunaEngine::DeleteInstance();
+    
+    int param = (int)window->GetMsg().wParam;
 
-    return (int)window->GetMsg().wParam;
+    Window::DeleteInstance();
+
+    return param;
 }
 
 

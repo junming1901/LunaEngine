@@ -5,6 +5,11 @@ struct FreeListAllocator
 public:
 
 	FreeListAllocator(size_t pagesize);
+	~FreeListAllocator();
+
+	// Do not allow copying
+	FreeListAllocator(const FreeListAllocator&) = delete;
+	FreeListAllocator& operator=(const FreeListAllocator&) = delete;
 
 	void* Allocate(size_t size, int alignment = 8);
 	void Deallocate(void* ptr);

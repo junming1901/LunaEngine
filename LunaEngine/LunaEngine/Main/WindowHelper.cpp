@@ -41,6 +41,10 @@ void Window::CreateInstance(const char* title, const char* window_name)
     strcpy_s(reinterpret_cast<char*>(m_Instance->m_WindowClass), MAX_LOADSTRING, window_name);
 }
 
+void Window::DeleteInstance()
+{
+    delete m_Instance;
+}
 
 ATOM Window::RegisterClass(HINSTANCE hInstance)
 {

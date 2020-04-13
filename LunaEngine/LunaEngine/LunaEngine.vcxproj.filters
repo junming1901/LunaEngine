@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -27,6 +23,21 @@
     </Filter>
     <Filter Include="Source Files\Math">
       <UniqueIdentifier>{f370a63d-ce41-47ed-9e75-c901a7b95217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity">
+      <UniqueIdentifier>{8c8917b4-342b-491a-a67e-e57cefc89fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity\Components">
+      <UniqueIdentifier>{65c56a10-8dbf-4978-9178-43e71e4f7e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{782f47f2-de0b-476a-a942-0c0ff0ef0d62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Systems\EntityManager">
+      <UniqueIdentifier>{05b267cb-b97f-457e-8005-609d4a3163c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilites">
+      <UniqueIdentifier>{f3852e2d-3ee7-429f-9cb2-b583450c5583}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +64,15 @@
     </ClInclude>
     <ClInclude Include="Math\Vec2.h">
       <Filter>Source Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\EntityManager.h">
+      <Filter>Source Files\Systems\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Entity.h">
+      <Filter>Source Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\System.h">
+      <Filter>Source Files\Systems</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +106,12 @@
     </ClCompile>
     <ClCompile Include="Math\Vec2.cpp">
       <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\EntityManager.cpp">
+      <Filter>Source Files\Systems\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Entity.cpp">
+      <Filter>Source Files\Entity</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

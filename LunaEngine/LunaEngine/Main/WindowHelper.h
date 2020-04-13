@@ -22,6 +22,7 @@ private:
 	Window();
 
 	static void CreateInstance(const char* title, const char* window_name);
+	static void DeleteInstance();
 
 	ATOM RegisterClass(HINSTANCE hInstance);
 	BOOL InitInstance(HINSTANCE hInstance, int nCmdShow);

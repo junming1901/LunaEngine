@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Vec2.h"
 #include <math.h>
 
@@ -48,22 +49,30 @@ Vec2& Vec2::operator+=(const Vec2& rhs)
 {
 	x += rhs.x;
 	y += rhs.y;
+
+	return *this;
 }
 
 Vec2& Vec2::operator-=(const Vec2& rhs)
 {
 	x -= rhs.x;
 	y -= rhs.y;
+
+	return *this;
 }
 
 Vec2& Vec2::operator*=(float rhs)
 {
 	x *= rhs;
 	y *= rhs;
+
+	return *this;
 }
 
 Vec2& Vec2::operator/=(float rhs)
 {
 	x /= rhs;
 	y /= rhs;
+
+	return *this;
 }

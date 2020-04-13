@@ -89,7 +89,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Entity;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;..\LunaEngine\Systems;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -107,7 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Entity;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;..\LunaEngine\Systems;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -127,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Entity;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;..\LunaEngine\Systems;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -149,7 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\LunaEngine\Main;..\LunaEngine\Entity;..\LunaEngine\Memory;..\LunaEngine\Resources;..\LunaEngine\Engine;..\LunaEngine\Systems;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -164,6 +164,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Engine\LunaEngine.h" />
+    <ClInclude Include="Entity\Entity.h" />
     <ClInclude Include="Main\stdafx.h" />
     <ClInclude Include="Main\Resource.h" />
     <ClInclude Include="Main\targetver.h" />
@@ -171,14 +172,18 @@
     <ClInclude Include="Math\Vec2.h" />
     <ClInclude Include="Memory\FreeListAllocator.h" />
     <ClInclude Include="Memory\MemoryManager.h" />
+    <ClInclude Include="Systems\EntityManager.h" />
+    <ClInclude Include="Systems\System.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\LunaEngine.cpp" />
+    <ClCompile Include="Entity\Entity.cpp" />
     <ClCompile Include="Main\main.cpp" />
     <ClCompile Include="Main\WindowHelper.cpp" />
     <ClCompile Include="Math\Vec2.cpp" />
     <ClCompile Include="Memory\FreeListAllocator.cpp" />
     <ClCompile Include="Memory\MemoryManager.cpp" />
+    <ClCompile Include="Systems\EntityManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Main\LunaEngine.ico" />

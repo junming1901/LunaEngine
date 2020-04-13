@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "LunaEngine.h"
 
+// Systems
+#include "EntityManager.h"
+
 LunaEngine* LunaEngine::m_Instance = nullptr;
 
 LunaEngine::~LunaEngine()
@@ -29,8 +32,9 @@ void LunaEngine::Init()
 {
 }
 
-void LunaEngine::Update()
+bool LunaEngine::Update()
 {
+	return true;
 }
 
 void LunaEngine::Free()
@@ -38,5 +42,6 @@ void LunaEngine::Free()
 }
 
 LunaEngine::LunaEngine()
+: m_EntityManager{ new EntityManager{ std::make_index_sequence<MAX_ENTITIES>{} } }
 {
 }
