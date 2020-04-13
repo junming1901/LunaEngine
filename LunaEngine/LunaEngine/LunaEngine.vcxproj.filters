@@ -45,6 +45,12 @@
     <ClInclude Include="Main\stdafx.h">
       <Filter>Source Files\Main</Filter>
     </ClInclude>
+    <ClInclude Include="Memory\FreeListAllocator.h">
+      <Filter>Source Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\MemoryManager.h">
+      <Filter>Source Files\Memory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Main\LunaEngine.ico">
@@ -68,6 +74,12 @@
     </ClCompile>
     <ClCompile Include="Engine\LunaEngine.cpp">
       <Filter>Source Files\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\FreeListAllocator.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\MemoryManager.cpp">
+      <Filter>Source Files\Memory</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

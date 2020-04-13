@@ -3,6 +3,10 @@
 
 LunaEngine* LunaEngine::m_Instance = nullptr;
 
+LunaEngine::~LunaEngine()
+{
+}
+
 void LunaEngine::CreateInstance()
 {
 	if (m_Instance == nullptr)
@@ -19,6 +23,18 @@ void LunaEngine::DeleteInstance()
 LunaEngine* LunaEngine::GetInstance()
 {
 	return m_Instance;
+}
+
+void LunaEngine::Init()
+{
+}
+
+void LunaEngine::Update()
+{
+}
+
+void LunaEngine::Free()
+{
 }
 
 LunaEngine::LunaEngine()
