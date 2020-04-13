@@ -132,13 +132,12 @@ void FreeListAllocator::AllocateNewPage()
 
 	InsertFreeNode(freenode);
 
+	m_FreeMemory += m_PageSize - sizeof(PageHeader);
 	++m_NumberPages;
 }
 
 FreeListAllocator::FreeNode* FreeListAllocator::InsertFreeNode(FreeNode* node)
 {
-	m_FreeMemory += node->m_MemorySize;
-
 	// Check if there are any free nodes
 	if (m_FreeNodes == nullptr)
 	{
