@@ -21,7 +21,6 @@ private:
 
 	Window();
 
-	// Functions
 	static void CreateInstance(const char* title, const char* window_name);
 
 	ATOM RegisterClass(HINSTANCE hInstance);
@@ -38,8 +37,8 @@ private:
 
 	static HINSTANCE m_hInst;
 	
-	WCHAR m_szTitle[MAX_LOADSTRING];
-	WCHAR m_szWindowClass[MAX_LOADSTRING];
+	WCHAR m_Title[MAX_LOADSTRING];
+	WCHAR m_WindowClass[MAX_LOADSTRING];
 
 	HACCEL m_AccelTable;
 	MSG m_Msg;

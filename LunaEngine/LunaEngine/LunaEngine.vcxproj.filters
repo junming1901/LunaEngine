@@ -19,11 +19,17 @@
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{1e566878-159c-4086-9941-50295ba37641}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Systems">
+      <UniqueIdentifier>{ba0acdd5-ba25-4755-9757-cd3f6b0b360e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{8cdc35a0-0597-47e6-8732-6a7a14f0f70a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{f370a63d-ce41-47ed-9e75-c901a7b95217}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Main\framework.h">
-      <Filter>Source Files\Main</Filter>
-    </ClInclude>
     <ClInclude Include="Main\Resource.h">
       <Filter>Source Files\Main</Filter>
     </ClInclude>
@@ -31,6 +37,12 @@
       <Filter>Source Files\Main</Filter>
     </ClInclude>
     <ClInclude Include="Main\WindowHelper.h">
+      <Filter>Source Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\LunaEngine.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\stdafx.h">
       <Filter>Source Files\Main</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="Main\main.cpp">
       <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\LunaEngine.cpp">
+      <Filter>Source Files\Engine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

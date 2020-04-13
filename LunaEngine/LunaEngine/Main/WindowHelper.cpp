@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Resource.h"
 #include "WindowHelper.h"
 
@@ -5,15 +6,15 @@ Window* Window::m_Instance = nullptr;
 HINSTANCE Window::m_hInst;
 
 Window::Window()
-: m_Msg {}, m_szTitle {}, m_szWindowClass {}
+: m_Msg {}, m_Title {}, m_WindowClass {}
 {
 }
 
 bool Window::Initialize(_In_ HINSTANCE hInstance, _In_ int nCmdShow)
 {
     // Initialize global strings
-    LoadStringW(hInstance, IDS_APP_TITLE, m_szTitle, MAX_LOADSTRING);
-    LoadStringW(hInstance, IDC_LUNAENGINE, m_szWindowClass, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDS_APP_TITLE, m_Title, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_LUNAENGINE, m_WindowClass, MAX_LOADSTRING);
     RegisterClass(hInstance);
 
     // Perform application initialization:
@@ -36,8 +37,8 @@ void Window::CreateInstance(const char* title, const char* window_name)
 {
 	m_Instance = new Window;
 
-    strcpy_s(reinterpret_cast<char*>(m_Instance->m_szTitle), MAX_LOADSTRING, title);
-    strcpy_s(reinterpret_cast<char*>(m_Instance->m_szWindowClass), MAX_LOADSTRING, window_name);
+    strcpy_s(reinterpret_cast<char*>(m_Instance->m_Title), MAX_LOADSTRING, title);
+    strcpy_s(reinterpret_cast<char*>(m_Instance->m_WindowClass), MAX_LOADSTRING, window_name);
 }
 
 
@@ -56,7 +57,7 @@ ATOM Window::RegisterClass(HINSTANCE hInstance)
     wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground = NULL;
     wcex.lpszMenuName = NULL;
-    wcex.lpszClassName = m_szWindowClass;
+    wcex.lpszClassName = m_WindowClass;
     wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
     return RegisterClassExW(&wcex);
@@ -76,7 +77,7 @@ BOOL Window::InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
     m_hInst = hInstance; // Store instance handle in our global variable
 
-    HWND hWnd = CreateWindowW(m_szWindowClass, m_szTitle, WS_OVERLAPPEDWINDOW,
+    HWND hWnd = CreateWindowW(m_WindowClass, m_Title, WS_OVERLAPPEDWINDOW,
                               CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
     if (!hWnd)

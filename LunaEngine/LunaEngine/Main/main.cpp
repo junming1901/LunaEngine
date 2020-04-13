@@ -1,8 +1,9 @@
 // LunaEngine.cpp : Defines the entry point for the application.
 //
 
-#include "framework.h"
+#include "stdafx.h"
 #include "WindowHelper.h"
+#include "LunaEngine.h"
 #include <fstream>
 
 #define CREATE_CONSOLE true
@@ -37,7 +38,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return false;
     }
 
+    LunaEngine::CreateInstance();
+
     window->RecieveMessage();
+
+    LunaEngine::DeleteInstance();
 
     return (int)window->GetMsg().wParam;
 }
