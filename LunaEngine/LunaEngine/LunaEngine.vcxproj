@@ -168,6 +168,7 @@
     <ClInclude Include="Main\Resource.h" />
     <ClInclude Include="Main\targetver.h" />
     <ClInclude Include="Main\WindowHelper.h" />
+    <ClInclude Include="Math\Vec2.h" />
     <ClInclude Include="Memory\FreeListAllocator.h" />
     <ClInclude Include="Memory\MemoryManager.h" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <ClCompile Include="Engine\LunaEngine.cpp" />
     <ClCompile Include="Main\main.cpp" />
     <ClCompile Include="Main\WindowHelper.cpp" />
+    <ClCompile Include="Math\Vec2.cpp" />
     <ClCompile Include="Memory\FreeListAllocator.cpp" />
     <ClCompile Include="Memory\MemoryManager.cpp" />
   </ItemGroup>
