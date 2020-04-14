@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include "MemoryManager.h"
 
 class Entity
 {
@@ -11,5 +11,5 @@ private:
 
 	const int m_Index;
 
-	std::string m_Name;
+	Luna::string m_Name;
 };
